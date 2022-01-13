@@ -43,8 +43,6 @@ sudo python3 parallel_traffic_generator.py
 
 > 其中 2054 是 ARP 包，2048 是 IP 包
 
-> 中间出现  `adjacency` 的 KeyError 报错，这是由于删除连接与流量生成事务发生乱序导致的，于是将 `LPR` 中的 link_delete_handler 函数注释掉，问题基本解决（不过最后 IP 包仍有个别节点未输出）
->
 > 运行结束后，需手动中止前一个进程
 
 ### RSR
@@ -89,7 +87,7 @@ ryu-manager LLR.py --observe-links > LLR_out.txt
 sudo python3 sequential_traffic_generator.py
 ```
 
-将在 `LLR_out.txt` 中得到前 10 条 ARP 首包路径：
+将在 `LLR_out.txt` 中得到前 10 条首包路径：
 
 ```
 2054 10.0.0.1 -> 10.0.0.5 :  1 1 -> 3
