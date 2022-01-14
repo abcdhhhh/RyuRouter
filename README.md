@@ -8,6 +8,8 @@ Fat-Tree 路由图：
 
 ### LPR
 
+靠左选择
+
 用两个进程运行命令：
 
 ```bash
@@ -23,6 +25,8 @@ sudo python3 parallel_traffic_generator.py
 
 ### RSR
 
+随机选择
+
 类似地，用两个进程运行命令：
 
 ```bash
@@ -33,6 +37,8 @@ sudo python3 parallel_traffic_generator.py
 将在 `RSR_out.txt` 中得到 h3->h7 和 h3->h8 的首包路径
 
 ### LLR
+
+最低负载选择
 
 用两个进程运行命令：
 
